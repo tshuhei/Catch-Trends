@@ -3,14 +3,14 @@ Rails.application.routes.draw do
   root "home#index"
 
   get "/twitter", to: "sns#twitter"
-  post "/twitter", to: "sns#twitterSearch"
+  post "/twitter-search", to: "sns#twitter_search"
   
   get "/linkedin", to: "sns#linkedin"
-  post "/linkedin", to: "sns#linkedinSearch"
+  post "/linkedin-search", to: "sns#linkedin_search"
 
   get "/tiktok", to: "sns#tiktok"
-  post "/tiktok", to: "sns#tiktokSearch"
+  post "/tiktok-search", to: "sns#tiktok_search"
 
   get "/instagram", to: "sns#instagram"
-  post "/instagram", to: "sns#instagramSearch"
+  post "/instagram-search", to: "sns#instagram_search"
 end

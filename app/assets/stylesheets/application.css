@@ -10,6 +10,47 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
  *= require_self
  */
+
+body{
+    font-family: 'メイリオ', 'Meiryo','ＭＳ ゴシック','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+}
+
+.header-container{
+    margin: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-img{
+    height: 40px;
+    padding: 0 20px;
+    width: auto;
+}
+
+.header-left{
+    display: flex;
+}
+
+.header-title{
+    font-size: 30px;
+    margin: 0px;
+    height: 40px;
+    line-height: 40px;
+    color: white;
+    font-weight: bold;
+}
+
+.header-title-black{
+    font-size: 30px;
+    margin: 0px;
+    height: 40px;
+    line-height: 40px;
+    color: black;
+    font-weight: bold;
+}
+
+.header-right{
+    display: flex;
+}

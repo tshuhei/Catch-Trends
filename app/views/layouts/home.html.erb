@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CatchTrends</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'home', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+        <%= render "partials/header-white" %>
+    </header>
+
+    <%= yield %>
+  
+    <footer>
+        <%= render "partials/footer", isInstagram: "false", color: "#000000"%>
+    </footer>
+  </body>
+</html>

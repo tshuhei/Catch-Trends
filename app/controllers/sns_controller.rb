@@ -1,27 +1,28 @@
 class SnsController < ApplicationController
+    layout "sns"
 
     def twitter
     end
 
-    def twitterSearch
+    def twitter_search
     end
 
     def linkedin
     end
 
-    def linkedinSearch
+    def linkedin_search
     end
 
     def tiktok
     end
 
-    def tiktokSearch
+    def tiktok_search
     end
 
     def instagram
     end
 
-    def instagramSearch
+    def instagram_search
     end
 
 end
