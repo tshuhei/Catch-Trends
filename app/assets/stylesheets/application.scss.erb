@@ -13,6 +13,9 @@
  *= require_self
  */
 
+/* reset.cssのインポート */
+@import "reset";
+
 body{
     font-family: 'メイリオ', 'Meiryo','ＭＳ ゴシック','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
 }
@@ -53,4 +56,20 @@ body{
 
 .header-right{
     display: flex;
+}
+
+.footer-container{
+    padding: 10px 0px;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.footer-container-instagram{
+    padding: 10px 0px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    background: url("<%= asset_path('instagram-back.jpg') %>");
+    background-size: cover;
 }

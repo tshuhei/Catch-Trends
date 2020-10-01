@@ -1,3 +1,7 @@
-<h1>This is footer partial</h1>
-<p>isInstagram: <%= isInstagram %></p>
-<p>color: <%= color %></p>
+<% if isInstagram == "true" %>
+    <div class="footer-container-instagram">
+<% else %>
+    <div class="footer-container" style="background-color: <%= color %>;">
+<% end %>
+    <p> ©︎ 2020 turituri08</p>
+</div>

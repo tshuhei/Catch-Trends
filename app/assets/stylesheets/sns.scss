@@ -1,3 +1,14 @@
 // Place all the styles related to the sns controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.top-text-container{
+    display: flex;
+    justify-content: center;
+    padding: 50px 0px;
+}
+
+.top-text{
+    font-size: 20px;
+    font-weight: bold;
+}
