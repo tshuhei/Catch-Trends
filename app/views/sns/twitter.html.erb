@@ -1,2 +1,10 @@
-<h1>Twitter</h1>
+<% rank = 1 %>
+<% @tweets_htmls.each do |tweet| %>
+    <p class="rank"><%= rank %>位</p>
+    <div class="tweet_wrapper">
+        <%== tweet %> 
+    </div>
+    <% rank += 1 %>
+<% end %> 
+
 <%= render "partials/footer", isInstagram: "false", color: "#1DA1F2" %>
