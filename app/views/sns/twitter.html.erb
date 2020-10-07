@@ -1,4 +1,18 @@
 <% rank = 1 %>
+
+<div class="form_wrapper">
+    <%= form_tag(controller: "sns", action: "twitter_search") do %>
+        <%= select_tag(:date, options_for_select([["今日",0],["昨日",1],["2日前",2],["3日前",3],["4日前",4],["5日前",5],["6日前",6],["7日前",7]],{style:"padding-right: 40px;"})) %>
+        <div style="display: flex">
+            <%= radio_button_tag(:language, "japanese") %>
+            <%= label_tag(:language_japanese, "Japanese", {style:"padding-right:20px;"}) %>
+            <%= radio_button_tag(:language, "english") %>
+            <%= label_tag(:language_english, "English",{style:"padding-right:50px;"})%>
+        </div>
+        <%= submit_tag("送信") %>
+    <% end %>
+</div>
+
 <% @tweets_htmls.each do |tweet| %>
     <p class="rank"><%= rank %>位</p>
     <div class="tweet_wrapper">
