@@ -9,20 +9,31 @@ class SnsController < ApplicationController
             config.access_token_secret = "NBCiMXhjb2yNhVuhU8KWvoGhMBPzVzos2l6Yd5Hkks0r3"
         end
 
+        lang = "ja"
+        date = Date.today
+
         if params["language"] then
             if params["language"]=="japanese" then
-                @tweets = client.search("lang:ja", result_type:"popular").take(20).collect
-                @tweets = @tweets.sort_by(&:favorite_count).reverse
+                lang = "ja"
+                #@tweets = client.search("lang:ja", result_type:"popular").take(20).collect
+                #@tweets = @tweets.sort_by(&:favorite_count).reverse
             else
-                @tweets = client.search("lang:en", result_type:"popular").take(20).collect
-                @tweets = @tweets.sort_by(&:favorite_count).reverse
+                lang = "en"
+                #@tweets = client.search("lang:en", result_type:"popular").take(20).collect
+                #@tweets = @tweets.sort_by(&:favorite_count).reverse
             end
-        else
-            @tweets = client.search("lang:ja", result_type:"popular").take(20).collect
-            @tweets = @tweets.sort_by(&:favorite_count).reverse
         end
 
+        if params["date"] then
+            date = date - params["date"].to_i
+        end
+
+        @tweets = client.search("lang:#{lang}", result_type:"popular", until:date.to_s).take(10).collect
+        # @tweets = client.search("", result_type:"popular", until:date.to_s).take(20).collect
+        @tweets = @tweets.sort_by(&:favorite_count).reverse
+
         @tweets_htmls = generateTwitterHTML(@tweets)
+        p date.to_s
     end
 
     def twitter_search

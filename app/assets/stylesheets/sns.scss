@@ -14,7 +14,7 @@
 }
 
 .tweet_wrapper{
-    padding: 20px 0px;
+    padding: 20px 30px;
     display: flex;
     justify-content: center;
 }
@@ -28,4 +28,29 @@
 .form_wrapper{
     display: flex;
     justify-content: center;
+}
+
+form{
+    display: flex;
+}
+
+@media screen and (max-width: 576px) {
+    /* 480px以下に適用されるCSS（スマホ用） */
+    .top-text{
+        font-size: 3.5vw;
+    }
+
+    .tweet_wrapper{
+        padding: 20px 10px;
+    }
+
+    .form_wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+    }
 }
