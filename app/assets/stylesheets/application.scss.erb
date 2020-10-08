@@ -79,7 +79,7 @@ body{
 .top-wrapper{
   display: inline-block;
   height: auto;
-  background-color:#333333 ;
+  background: linear-gradient(-45deg,#000000,#cccccc);
   opacity: 0.7px;
   height: 700px;
 }
@@ -90,20 +90,33 @@ body{
 
 .top-wrapper h1{
   margin-top: 40px;
-  font-size: 60px;
+  font-size: 70px;
   font-weight: bold;
   color: white;
 }
 
 .top-under h2{
   color: white;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bold;
   padding-bottom: 30px;
 }
 
+.fadein {
+ opacity : 0;
+ transform : translate(0, 45px);
+ transition : all 4000ms;
+}
+
+.fadein.effect-scroll {
+ opacity : 1;
+ transform : translate(0, 0);
+}
+
 .top-under p{
   font-size: 20px;
+  color: white;
+  opacity: 0.8;
 }
 
 
@@ -117,25 +130,25 @@ body{
 }
 
 .sns-image{
+  opacity: 0.8;
   width: 50%;
   height: auto;
   position: absolute;
     top: 50%;
     left: 50%;
+      transition-duration: 0.8s;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
 
 .sns-image:hover{
-  animation: flash 3s;
+  opacity: 1;
+  transform: scale(1.6,1.6) translate(-30%, -30%);
+  cursor: pointer;
 }
 
-@keyframes flash {
-	0% { background: #20b2aa; }
-	10% { background: #96e9e6; }
-	100% { background: #20b2aa; }
-}
+
 
 @media (max-width: 576px ) {
   .sns-icons{
